@@ -68,9 +68,11 @@ body header nav .blocNav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   background-color: #ffe0b2;
-  padding-left: 10px;
 }
 
 body header nav .blocNav a {
@@ -83,12 +85,39 @@ body header nav .blocNav a {
       -ms-flex-align: center;
           align-items: center;
   height: 15%;
-  width: 80%;
+  width: 90%;
+}
+
+body header nav .blocNav a .blocSelect {
+  background-color: #b3e5fc;
+  height: 100%;
+  width: 100px;
+  margin-right: -162px;
+  -webkit-transition: -webkit-transform 400ms linear;
+  transition: -webkit-transform 400ms linear;
+  transition: transform 400ms linear;
+  transition: transform 400ms linear, -webkit-transform 400ms linear;
+}
+
+body header nav .blocNav a:hover > .blocSelect {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+body header nav .blocNav a:hover > .icon {
+  -webkit-transform: translateX(99%);
+          transform: translateX(99%);
+  z-index: 2;
 }
 
 body header nav .blocNav .icon {
   font-size: 30px;
   color: #e0f2f1;
+}
+
+body header nav .blocNav .iconSelected {
+  font-size: 45px;
+  color: #b3e5fc;
 }
 
 body header nav .blocNav .hidden {
@@ -112,7 +141,7 @@ body main #acceuilHead {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 100px;
+  padding-left: 120px;
   height: 110px;
   border-bottom: 1px solid #fb8c00;
   background-color: #ffe0b2;
@@ -120,8 +149,7 @@ body main #acceuilHead {
 }
 
 body main #acceuilContent {
-  padding-left: 100px;
-  padding-top: 100px;
+  padding: 120px;
   height: 90%;
   overflow: scroll;
   scrollbar-color: #fb8c00 #ffe0b2;
